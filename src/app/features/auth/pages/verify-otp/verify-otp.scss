@@ -1,0 +1,142 @@
+.otp-container {
+  width: 100%;
+  max-width: 460px;
+
+  padding: 42px;
+
+  border-radius: 28px;
+
+  background: white;
+
+  border: 1px solid #eef2f7;
+
+  box-shadow:
+    0 10px 30px rgba(15,23,42,0.06);
+}
+
+/* HEADER */
+
+.header {
+  margin-bottom: 34px;
+
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 12px;
+}
+
+.header p {
+  color: #6b7280;
+
+  line-height: 1.7;
+}
+
+/* FORM */
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+/* OTP INPUT */
+
+.input-group input {
+  width: 100%;
+  height: 70px;
+
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+
+  background: #f9fafb;
+
+  outline: none;
+
+  text-align: center;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  letter-spacing: 12px;
+
+  transition: 0.25s;
+}
+
+.input-group input:focus {
+  border-color: #0f8b8d;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 4px rgba(15,139,141,0.08);
+}
+
+/* BUTTON */
+
+.verify-btn {
+  height: 58px;
+
+  border: none;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f8b8d,
+      #14b8a6
+    );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.verify-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 24px rgba(15,139,141,0.18);
+}
+
+/* RESEND */
+
+.resend {
+  margin-top: 28px;
+
+  text-align: center;
+
+  color: #6b7280;
+}
+
+.resend button {
+  border: none;
+  background: transparent;
+
+  color: #0f8b8d;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .otp-container {
+    padding: 28px 22px;
+  }
+
+}

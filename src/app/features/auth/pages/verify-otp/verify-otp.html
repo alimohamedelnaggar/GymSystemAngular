@@ -1,0 +1,58 @@
+<div class="otp-container">
+
+  <div class="header">
+
+    <h1>Verify OTP</h1>
+
+    <p>
+      Enter the 6-digit verification code
+      sent to your email
+    </p>
+
+  </div>
+
+  <form
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+  >
+
+    <div class="input-group">
+
+      <input
+        type="text"
+        maxlength="6"
+        formControlName="otp"
+        placeholder="------"
+      />
+
+    </div>
+
+    <button
+      class="verify-btn"
+      type="submit"
+    >
+      Verify Code
+    </button>
+
+  </form>
+
+  <div class="resend">
+
+  <ng-container *ngIf="!canResend">
+
+    Resend OTP in
+    {{ countdown }}s
+
+  </ng-container>
+
+  <button
+    *ngIf="canResend"
+    type="button"
+    (click)="ResendOtp()"
+  >
+    Resend OTP
+  </button>
+
+</div>
+
+</div>

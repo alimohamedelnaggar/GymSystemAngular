@@ -1,0 +1,269 @@
+.register-container {
+  width: 100%;
+  max-width: 520px;
+
+  padding: 42px;
+
+  border-radius: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #eef2f7;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+/* HEADER */
+
+.header {
+  margin-bottom: 34px;
+}
+
+.header h1 {
+  font-size: 38px;
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 10px;
+
+  letter-spacing: -1px;
+}
+
+.header p {
+  color: #6b7280;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* FORM */
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+/* INPUT GROUP */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+/* CUSTOM INPUT */
+
+.custom-input {
+  height: 58px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  background: #f9fafb;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 18px;
+
+  transition: 0.25s;
+}
+
+.custom-input:focus-within {
+  border-color: #0f8b8d;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 4px rgba(15, 139, 141, 0.08);
+}
+
+.custom-input mat-icon {
+  color: #9ca3af;
+
+  font-size: 22px;
+}
+
+.custom-input input {
+  flex: 1;
+
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  padding: 0 14px;
+
+  font-size: 15px;
+}
+
+/* PASSWORD BUTTON */
+
+.eye-btn {
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+/* TERMS */
+
+.terms {
+  margin-top: 4px;
+}
+
+/* REGISTER BUTTON */
+
+.register-btn {
+  height: 58px;
+
+  border: none;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f8b8d,
+      #14b8a6
+    );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 24px rgba(15,139,141,0.18);
+}
+
+/* DIVIDER */
+
+.divider {
+  margin: 28px 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+
+  flex: 1;
+  height: 1px;
+
+  background: #e5e7eb;
+}
+
+/* SOCIAL BUTTONS */
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.social-btn {
+  height: 56px;
+
+  border-radius: 18px;
+
+  border: 1px solid #e5e7eb;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.25s;
+}
+
+.social-btn:hover {
+  border-color: #d1d5db;
+
+  background: #f9fafb;
+}
+
+.social-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+/* FOOTER */
+
+.login-link {
+  margin-top: 30px;
+
+  text-align: center;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+.login-link a {
+  color: #0f8b8d;
+
+  text-decoration: none;
+
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .register-container {
+    padding: 28px 22px;
+
+    border-radius: 22px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+}

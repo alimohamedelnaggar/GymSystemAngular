@@ -1,0 +1,106 @@
+.auth-layout {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: #f5f7fa;
+}
+
+.branding-side {
+  position: relative;
+
+  background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438');
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  padding: 80px;
+
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  backdrop-filter: blur(3px);
+}
+
+.branding-content {
+  position: relative;
+
+  z-index: 2;
+
+  color: white;
+}
+
+.branding-content h1 {
+  font-size: 72px;
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.branding-content p {
+  font-size: 22px;
+
+  max-width: 500px;
+
+  line-height: 1.6;
+
+  margin-bottom: 40px;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  padding: 24px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  min-width: 180px;
+}
+
+.stat-card h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.form-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px;
+}
+
+@media (max-width: 992px) {
+
+  .auth-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .branding-side {
+    display: none;
+  }
+
+  .form-side {
+    padding: 20px;
+  }
+
+}

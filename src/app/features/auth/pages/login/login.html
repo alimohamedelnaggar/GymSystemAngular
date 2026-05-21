@@ -1,0 +1,74 @@
+<div class="login-container">
+  <div class="header">
+    <h1>Welcome Back</h1>
+
+    <p>Login to continue your fitness journey</p>
+  </div>
+  <div class="success-alert" *ngIf="verified">
+    Your email has been verified successfully. You can now login.
+  </div>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Email Address</mat-label>
+
+      <input matInput type="email" formControlName="email" />
+
+      <mat-icon matSuffix> mail </mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+
+      <input matInput [type]="hidePassword() ? 'password' : 'text'" formControlName="password" />
+
+      <button mat-icon-button matSuffix type="button" (click)="hidePassword.set(!hidePassword())">
+        <mat-icon>
+          {{ hidePassword() ? 'visibility_off' : 'visibility' }}
+        </mat-icon>
+      </button>
+    </mat-form-field>
+
+    <div class="actions">
+      <mat-checkbox formControlName="rememberMe"> Remember me </mat-checkbox>
+
+      <a href="#"> Forgot Password? </a>
+    </div>
+
+    <button mat-flat-button class="login-btn" type="submit">Login</button>
+    <div class="divider">
+      <span>OR CONTINUE WITH</span>
+    </div>
+
+    <div class="social-buttons">
+      <button type="button" class="social-btn google" (click)="googleLogin()">
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+          alt="google"
+        />
+
+        Google
+      </button>
+
+      <button type="button" class="social-btn facebook" (click)="facebookLogin()">
+         <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="facebook" />
+
+        Facebook
+      </button>
+
+      <button type="button" class="social-btn microsoft" (click)="microsoftLogin()">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+          alt="microsoft"
+        />
+
+        Microsoft
+      </button>
+    </div>
+  </form>
+
+  <div class="register-link">
+    Don't have an account?
+
+    <a routerLink="/auth/register"> Create Account </a>
+  </div>
+</div>
