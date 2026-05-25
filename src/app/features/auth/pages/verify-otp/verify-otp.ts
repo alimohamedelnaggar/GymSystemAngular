@@ -96,19 +96,19 @@ interval: any;
 
         switch(role){
           case 'Admin':
-            this.router.navigate(['/admin']);
+            this.router.navigate(['/home']);
             break;
           case 'Trainer':
-            this.router.navigate(['/trainer']);
+            this.router.navigate(['/home']);
             break;
           case 'Member':
-            this.router.navigate(['/member']);
+            this.router.navigate(['/home']);
             break;
           default:
             this.router.navigate(['/']);
         }
 
-        this.router.navigate(['/login']);
+        this.router.navigate(['/home']);
       },
       error:(error:any)=>{
         console.error(error);

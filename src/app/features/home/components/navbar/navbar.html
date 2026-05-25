@@ -1,0 +1,201 @@
+<nav class="navbar">
+
+  <!-- LOGO -->
+
+  <div class="logo">
+
+    FitFlow
+
+  </div>
+
+  <!-- LINKS -->
+
+  <div class="nav-links">
+
+    <a>
+      Home
+    </a>
+
+    <a>
+      Plans
+    </a>
+
+    <a>
+      Coaches
+    </a>
+
+    <a>
+      AI Chat
+    </a>
+
+    <a>
+    Equipment Store
+  </a>
+  
+  </div>
+
+  <!-- RIGHT SIDE -->
+
+  <div class="right-side">
+
+    <!-- GUEST -->
+
+    <ng-container
+      *ngIf="!authService.isAuthenticated()"
+    >
+
+      <div class="auth-buttons">
+
+        <a
+          routerLink="/auth/login"
+          class="login-btn"
+        >
+          Login
+        </a>
+
+        <a
+          routerLink="/auth/register"
+          class="register-btn"
+        >
+          Register
+        </a>
+
+      </div>
+
+    </ng-container>
+
+    <!-- AUTHENTICATED -->
+
+    <ng-container
+      *ngIf="authService.isAuthenticated()"
+    >
+
+      <!-- NOTIFICATION -->
+
+      <div class="notification">
+
+        🔔
+
+        <span>
+          3
+        </span>
+
+      </div>
+
+      <!-- AVATAR -->
+
+      <div class="avatar-wrapper">
+
+        <div
+          class="avatar"
+          (click)="toggleProfileMenu(); $event.stopPropagation()"
+        >
+
+          A
+
+        </div>
+
+        <!-- DROPDOWN -->
+
+        <div
+          class="dropdown"
+          *ngIf="isProfileMenuOpen"
+        >
+
+          <a>
+            Profile
+          </a>
+
+          <a>
+            Settings
+          </a>
+
+          <button
+            (click)="logout()"
+          >
+            Logout
+          </button>
+
+        </div>
+
+      </div>
+
+    </ng-container>
+
+    <!-- MOBILE MENU -->
+
+    <button
+      class="burger-btn"
+      (click)="toggleMobileMenu(); $event.stopPropagation()"
+    >
+
+      ☰
+
+    </button>
+
+  </div>
+
+</nav>
+
+<!-- MOBILE MENU -->
+
+<div
+  class="mobile-menu"
+  *ngIf="isMobileMenuOpen"
+>
+
+  <a>
+    Home
+  </a>
+
+  <a>
+    Plans
+  </a>
+
+  <a>
+    Coaches
+  </a>
+
+  <a>
+    AI Chat
+  </a>
+
+  <a>
+    Equipment Store
+  </a>
+
+  <!-- GUEST -->
+
+  <ng-container
+    *ngIf="!authService.isAuthenticated()"
+  >
+
+    <a routerLink="/auth/login">
+      Login
+    </a>
+
+    <a routerLink="/auth/register">
+      Register
+    </a>
+
+  </ng-container>
+
+  <!-- USER -->
+
+  <ng-container
+    *ngIf="authService.isAuthenticated()"
+  >
+
+    <a>
+      Profile
+    </a>
+
+    <button
+      (click)="logout()"
+    >
+      Logout
+    </button>
+
+  </ng-container>
+
+</div>

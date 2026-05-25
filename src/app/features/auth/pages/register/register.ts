@@ -60,4 +60,24 @@ console.log(this.form.errors);
       }
     })
   }
+  googleLogin() {
+
+  window.location.href =
+    'https://localhost:7282/api/Account/external-login/google';
+
+}
+
+facebookLogin() {
+
+  window.location.href =
+    'https://localhost:7282/api/Account/external-login/facebook';
+
+}
+
+microsoftLogin() {
+
+  window.location.href =
+    'https://localhost:7282/api/Account/external-login/microsoft';
+
+}
 }
